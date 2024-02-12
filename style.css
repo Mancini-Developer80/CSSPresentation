@@ -1,0 +1,134 @@
+:root {
+    --page-1-color: #34D1BF;
+    --page-2-color: #D1345B;
+    --page-3-color: #3493C8;
+    --page-4-color: #6C1E31;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+   font-family: Arial, Helvetica, sans-serif; 
+   line-height: 1.4;
+   color: #fff;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+}
+
+/* Page colors */
+
+#first-page {
+    background-color: var( --page-1-color);
+}
+
+#second-page {
+    background-color: var( --page-2-color);
+
+}
+#third-page {
+    background-color: var( --page-3-color);
+}
+#fourth-page {
+    background-color: var( --page-4-color);
+}
+
+#first-page h1 {
+    animation: title 2s ease-in;
+}
+#first-page p {
+    animation: paragraph 2s ease-in;
+}
+
+#first-page a {
+    animation: buttonFirst 3s ease-out;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 4rem
+}
+
+.page h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin: 1rem;
+}
+
+.page p {
+    font-size: 1.3rem;
+}
+
+.btn {
+   display: inline-block;
+   padding: 1rem 2rem;
+   background: #f4f4f4;
+   color: #333;
+   text-decoration: none;
+   border: none;
+   border-radius: 4px; 
+   margin-top: 1rem;
+   font-size: 1.1rem;
+   transition: all 0.3s ease-in;
+}
+
+.btn:hover,
+.btn-dark {
+    background: #333;
+    color: #fff;
+}
+
+.btn-dark:hover {
+    background: #fff;
+    color: #333;
+}
+
+@keyframes title {
+    0% {
+        opacity: 0;
+        transform: translateY(-1200px) scale(30);
+    }
+
+        
+    100% {
+        transform: translateY(0) scale(1);
+        
+    }
+    
+}
+
+@keyframes paragraph {
+    0% {
+        opacity: 0;
+        transform: translateX(-1800px)
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes buttonFirst {
+    0% {
+        opacity: 0;
+        transform: scale(0) translateY(1400px)
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
